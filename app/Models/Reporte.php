@@ -32,6 +32,7 @@ class Reporte extends Model
         'estado',
         'competencia',
         'resultado_aprendizaje',
+        'jucio_evaluacion',
         'funcionario_registro_juicio',
     ];
     

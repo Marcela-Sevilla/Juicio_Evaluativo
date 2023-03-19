@@ -34,6 +34,7 @@ return new class extends Migration
             $table->string('estado');
             $table->string('competencia');
             $table->string('resultado_aprendizaje');
+            $table->string('jucio_evaluacion');
             $table->string('funcionario_registro_juicio')->nullable();
             $table->timestamps();
         });
