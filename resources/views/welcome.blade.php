@@ -19,7 +19,7 @@
         <section class="card border-3 shadow-sm border-success bg-light">
             <div class="card-body">
                 <h4 class="card-title text-success">Importar Excel de Reportes por Fichas</h4>
-                <form action="" method="post" class="row">
+                <form action="/envioReporte" method="post" enctype="multipart/form-data" class="row">
                     @csrf
                     <div class="col-md-9 mb-3">
                         <input class="form-control shadow-sm" type="file" accept=".xlsx" id="fileExcel" name="fileExcel">
@@ -39,6 +39,7 @@
                     <tr>
                         <th>Ficha y Programa</th>
                         <th>Tipo de Documento</th>
+                        <th>Número de Documento</th>
                         <th>Nombre Aprendiz</th>
                         <th>TRIMESTRE I 2020</th>
                         <th>TRIMESTRE II 2020</th>
@@ -61,6 +62,38 @@
                         <th>Funcionaro</th>
                     </tr>
                 </thead>
+
+                <tbody>
+                    @if(isset($reportes))
+                        @foreach ($reportes as $reporte)
+                            <tr>
+                                <td>{{$reporte->ficha_programa}}</td>
+                                <td>{{$reporte->tipo_documento}}</td>
+                                <td>{{$reporte->numero_documento}}</td>
+                                <td>{{$reporte->nombre_aprendiz}}</td>
+                                <td>{{$reporte->trimestre_I_2020}}</td>
+                                <td>{{$reporte->trimestre_II_2020}}</td>
+                                <td>{{$reporte->trimestre_III_2020}}</td>
+                                <td>{{$reporte->trimestre_IV_2020}}</td>
+                                <td>{{$reporte->trimestre_I_2021}}</td>
+                                <td>{{$reporte->trimestre_II_2021}}</td>
+                                <td>{{$reporte->trimestre_III_2021}}</td>
+                                <td>{{$reporte->trimestre_IV_2021}}</td>
+                                <td>{{$reporte->trimestre_I_2022}}</td>
+                                <td>{{$reporte->trimestre_II_2022}}</td>
+                                <td>{{$reporte->trimestre_III_2022}}</td>
+                                <td>{{$reporte->trimestre_IV_2022}}</td>
+                                <td>{{$reporte->trimestre_I_2023}}</td>
+                                <td>{{$reporte->trimestre_II_2023}}</td>
+                                <td>{{$reporte->estado}}</td>
+                                <td>{{$reporte->competencia}}</td>
+                                <td>{{$reporte->resultado_aprendizaje}}</td>
+                                <td>{{$reporte->jucio_evaluacion}}</td>
+                                <td>{{$reporte->funcionario_registro_juicio}}</td>
+                            </tr>
+                        @endforeach
+                    @endif
+                </tbody>
                 </table>
             </div>
         </section>
