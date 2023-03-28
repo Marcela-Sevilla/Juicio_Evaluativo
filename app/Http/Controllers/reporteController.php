@@ -12,8 +12,8 @@ class reporteController extends Controller
 {
     public function index()
     {
-        $reportes = Reporte::all();
-        return view('welcome')->with('reportes', $reportes);
+        // $reportes = Reporte::all();
+        return view('welcome');
 
     }
 

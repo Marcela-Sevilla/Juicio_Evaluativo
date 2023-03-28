@@ -14,10 +14,6 @@ use App\Http\Controllers\reporteController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/reporte',[reporteController::class, 'index'])->name('reporte');
+Route::get('/',[reporteController::class, 'index'])->name('reporte');
 
 Route::post('/envioReporte',[reporteController::class, 'store']);

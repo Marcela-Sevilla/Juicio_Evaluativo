@@ -34,7 +34,7 @@
         <section class="card border-3 shadow-sm border-success bg-light mt-4">
             <div class="card-body">
                 <h4 class="card-title text-success">Tabla de Reportes Fichas Sede TIC</h4>
-                <table id="example" class="table table-striped dt-responsive nowrap" style="width:100%">
+                <!-- <table id="example" class="table table-striped dt-responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>Ficha y Programa</th>
@@ -94,7 +94,7 @@
                         @endforeach
                     @endif
                 </tbody>
-                </table>
+                </table> -->
             </div>
         </section>
     </main>

@@ -46,12 +46,12 @@ class ReporteImport implements ToModel
 
     public function batchSize(): int
     {
-        return 4000;
+        return 5000;
     }
 
     public function chunkSize(): int
     {
-        return 4000;
+        return 5000;
     }
 
 }
